@@ -28,7 +28,9 @@ export default function Home() {
     if (alanInstance != null) return;
     setAlanInstance(
       alanBtn({
-        key: process.env.ALAN_API_KEY,
+        key:
+          process.env.ALAN_API_KEY ||
+          "c17d9b322a3784d953f3cfbb31fc7ab62e956eca572e1d8b807a3e2338fdd0dc/stage",
         rootEl: document.getElementById("alan-btn"),
         onCommand: ({ command, city_name }) => {
           if (command === "search") {
