@@ -1,15 +1,13 @@
 import React, { useCallback, useEffect, useState } from "react";
 import Head from "next/head";
-import Image from "next/image";
 import fetchData from "./api/api";
+import WeatherDetail from "../components/WeatherDetail";
 
 export default function Home() {
   const [city, setCity] = useState("");
   const [weather, setWeather] = useState();
   const [notFound, setNotFound] = useState();
   const [alanInstance, setAlanInstance] = useState();
-
-  console.log(process.env.OEPN_WEATER_API_KEY);
 
   const formatData = useCallback(
     (detail) => {
@@ -76,28 +74,7 @@ export default function Home() {
           onKeyPress={search}
         />
 
-        {weather && (
-          <div className="city">
-            <h2 className="city-name">
-              <span>{weather.name}</span>
-              <sup>{weather.sys.country}</sup>
-            </h2>
-            <div className="city-temp">
-              {weather.main.temp}
-              <sup>&deg;C</sup>
-            </div>
-            <div className="info">
-              <Image
-                className="city-icon"
-                src={`https://openweathermap.org/img/wn/${weather.weather[0].icon}@2x.png`}
-                height="100"
-                width="100"
-                alt={weather.weather[0].description}
-              />
-              <p>{weather.weather[0].description}</p>
-            </div>
-          </div>
-        )}
+        {weather && <WeatherDetail weather={weather} />}
 
         {notFound && (
           <div className="city">
