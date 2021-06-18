@@ -1,0 +1,65 @@
+{
+  "short_name": "Weather App",
+  "name": "Weather App",
+  "scope": "/",
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff",
+  "icons": [
+    {
+      "src": "/favicon.ico",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/x-icon",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "/images/logo72.png",
+      "type": "image/png",
+      "sizes": "72X72",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "/images/logo96.png",
+      "type": "image/png",
+      "sizes": "96X96",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "/images/logo128.png",
+      "type": "image/png",
+      "sizes": "128X128",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "/images/logo144.png",
+      "type": "image/png",
+      "sizes": "144X144",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "/images/logo152.png",
+      "type": "image/png",
+      "sizes": "152X152",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "/images/logo192.png",
+      "type": "image/png",
+      "sizes": "192X192",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "/images/logo384.png",
+      "type": "image/png",
+      "sizes": "384X384",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "/images/logo512.png",
+      "type": "image/png",
+      "sizes": "512X512",
+      "purpose": "maskable any"
+    }
+  ]
+}
