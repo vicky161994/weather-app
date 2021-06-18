@@ -46,7 +46,7 @@ export default function Home() {
   }, [weather]);
 
   const search = async (e) => {
-    if (e.key === "Enter") {
+    if (e.key === "Enter" || e.type === "click") {
       getData(city);
     }
   };
@@ -86,6 +86,7 @@ export default function Home() {
           onChange={(e) => setCity(e.target.value)}
           onKeyPress={search}
         />
+        <button onClick={search}>Search</button>
 
         {weather && <WeatherDetail weather={weather} />}
 
